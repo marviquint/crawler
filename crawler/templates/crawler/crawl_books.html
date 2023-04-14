@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Data</title>
+</head>
+<body>
+    {% if books %}
+    <ul>
+    {% for book in books %}
+        <li>
+            <strong>Title:</strong> {{ book.title }}<br>
+            <strong>Price:</strong> {{ book.price }}<br>
+            <strong>Availability:</strong> {{ book.availability }}<br>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No data to display.</p>
+{% endif %}
+
+</body>
+</html>
